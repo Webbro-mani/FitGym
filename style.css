@@ -1,0 +1,801 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Special+Gothic+Expanded+One&display=swap');
+
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar-nav {
+  gap: 40px;
+}
+
+.nav-link {
+  font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+
+.nav-link:hover{
+  color: #f36100;
+}
+
+.navbar-toggler {
+  background-color: white;
+}
+
+.underline-hover {
+  position: relative;
+  display: inline-block;
+  
+  text-decoration: none;
+  padding: 5px;
+}
+
+.underline-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f36100;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.underline-hover:hover::after {
+  transform: scaleX(1);
+}
+
+.orange {
+  color: #f36100;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h2{
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 32px;
+}
+
+h1{
+  font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+}
+
+h4 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    margin-top: 8px;
+}
+
+
+h5 {
+  color: white;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.fa-brands,
+.fab {
+  font-weight: 400;
+  font-size: 25px;
+  color: white;
+}
+
+.fa-brands,
+.fab:hover {
+  color: orange;
+}
+
+.carousel-item {
+  position: relative;
+  height: 1040px;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  text-align: left;
+  position: absolute;
+  margin-left: 570px;
+  bottom: 50%;
+  left: 0%;
+}
+
+.spacing {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+}
+
+.content h1 {
+  text-transform: uppercase;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  color: white;
+}
+
+.btn {
+  border: 1px solid white;
+  border-radius: 0;
+  background-color: transparent;
+  color: white;
+  margin: 20px 0px;
+}
+
+
+@media (max-width:768px) {
+
+  .navbar{
+    padding-right: 15px;
+    padding-top: 55px;
+    padding-left: 15px;
+  }
+
+  .navbar-nav {
+    gap: 0px;
+  }
+
+  .carousel-item {
+    height: 650px;
+  }
+
+  .content {
+    margin-left: 0px;
+    bottom: 30%;
+    padding: 0px 10px;
+  }
+
+  .content h1 {
+    font-size: 37px;
+    margin: 10px 0px;
+  }
+
+  .spacing {
+    letter-spacing: 2px;
+
+  }
+
+  .register-banner h2 {
+    font-size: 30px !important;
+  }
+
+  .title{
+    font-size: 16px !important;
+  }
+
+  .team-title {
+    flex: none !important;
+    text-align: left !important;
+    margin-bottom: 45px !important;
+  }
+
+  h1 {
+    font-size: 28px !important;
+  }
+
+  .swiper-slide {
+    height: 450px;
+    width: 290px;
+    overflow: hidden;
+    position: relative;
+    border: none;
+  }
+
+  .col-md-4 .location i{
+    width: 75px;
+  }
+}
+
+.box {
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+
+.section-title {
+  margin-bottom: 45px;
+}
+
+.section-title h1 {
+  margin: 8px 0px 0px 0px;
+}
+
+.fs-items {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.fs-items h4 {
+  color: white;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.fs-items:hover .gym-icons{
+  background-color: #f36100;
+  color: white;
+}
+
+p {
+  font-size: 14px;
+  font-family: "Muli", sans-serif;
+  color: #a9a9a9;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 15px 0;
+}
+
+.gym-icons {
+  height: 90px;
+  width: 90px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f36100;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+i {
+  font-size: 40px;
+}
+
+.class-item {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid white;
+  box-shadow: 0px 0px 10px 10px #444444;
+  border-radius: 5px;
+}
+
+.class-pics img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background-size: cover;
+}
+
+.class-details {
+  padding: 30px 30px 26px 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.class-details::after {
+  position: absolute;
+  left: -5px;
+  top: -30px;
+  height: 100px;
+  width: 600px;
+  border-top: 4px solid #464646;
+  background-color: #0a0a0a;
+  content: "";
+  transform: rotate(-8deg);
+  z-index: -1;
+}
+
+.class-details a {
+  display: flex;
+  height: 46px;
+  width: 46px;
+  text-align: center;
+  line-height: 46px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(135 117 117 / 34%);
+}
+
+.class-details a i {
+  font-size: 16px !important;
+}
+
+.banner-box {
+  height: 550px;
+  width: 100%;
+  background-image: url("banner.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.banner-box-shadow {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #46464678;
+  top: 0;
+  left: 0;
+}
+
+.register-banner {
+  color: white;
+  text-transform: uppercase;
+  margin-top: 150px;
+  position: relative;
+}
+
+.register-banner h2 {
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 25px;
+}
+
+.register-banner .gym-tips {
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+
+.register-banner .primary-btn {
+  padding: 16px 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  border: 2px solid #f36100;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.register-banner .primary-btn a {
+  cursor: pointer;
+}
+
+.register-banner .primary-btn:hover {
+  background-color: #f36100;
+  color: white;
+  border: none;
+}
+
+.plan-item {
+  border: 2px solid white;
+  text-align: center;
+  padding: 40px 30px 52px;
+  margin-bottom: 30px;
+  position: relative;
+  transition: all 0.3s ease;
+  transform: skew(-8deg);
+}
+
+
+
+.bordercolor{
+  animation: bordercolor 4s linear infinite;
+}
+
+@keyframes bordercolor {
+  0%   { border-color: red; }
+  16%  { border-color: orange; }
+  33%  { border-color: yellow; }
+  50%  { border-color: green; }
+  66%  { border-color: blue; }
+  83%  { border-color: indigo; }
+  100% { border-color: violet; }
+}
+
+.plan-item:hover h4{
+  color: black;
+}
+
+.plan-item:hover {
+  background-color: white;
+  transform: skew(0deg);
+}
+
+.plan-item:hover span {
+  color: black;
+}
+
+.plan-item h3 {
+  color: white;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.plan-item:hover h3,
+.plan-item:hover .plan-list li {
+  color: black;
+}
+
+
+.plan-price {
+  margin-bottom: 30px;
+}
+
+.plan-item:hover .pricing-btn {
+  background-color: #f36100;
+  border-color: #f36100;
+}
+
+.plan-price h2 {
+  color: #f36100;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.plan-price span {
+  color: white;
+  font-weight: 600;
+}
+
+.plan-list {
+  list-style: none !important;
+  color: white;
+  padding-left: 0px;
+}
+
+.plan-list LI {
+  line-height: 32px;
+  font-size: 16px;
+}
+
+.pricing-btn {
+  border: 1px solid white;
+  border-radius: 0;
+  color: white;
+  font-weight: 700;
+  margin: 20px 0px;
+  padding: 17px 30px 16px;
+  text-transform: uppercase;
+  width: 100%;
+  background: #323232;
+  transition: background 0.2s ease;
+}
+
+
+
+.plan-item .image-icon {
+  position: absolute;
+  left: 50px;
+  bottom: 140px;
+  font-size: 48px;
+  color: #f36100;
+  visibility: hidden;
+}
+
+.plan-item:hover .image-icon {
+  visibility: visible;
+}
+
+.gym-gallary-container {
+  display: flex;
+}
+
+.gym-photo {
+  display: inline-block;
+  position: relative;
+}
+
+.gym-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: 470px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gym-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.fa-icon-hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f36100;
+  font-size: 40px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.gym-photo:hover .fa-icon-hover {
+  opacity: 1;
+}
+
+/* team-member-edit */
+
+.team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+
+.team-title {
+  flex: 1;
+}
+
+.team-header .primary-btn {
+  padding: 16px 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  border: 2px solid #f36100;
+  background: transparent;
+  transition: background 0.5s ease;
+}
+
+.team-header .primary-btn:hover {
+  background-color: #f36100;
+  color: white;
+  border: none;
+  padding: 16px 30px;
+  border: 2px solid #f36100;
+}
+
+.swiper-slide {
+  height: 450px;
+  width: 360px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.swiper-slide .class-pics img {
+  width: 100%;
+  height: 450px;
+  display: block;
+  background-size: cover;
+}
+
+.swiper-slide .class-details {
+  padding: 30px 30px 26px 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(1005);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  z-index: 2;
+}
+
+.swiper-slide:hover .class-details {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.swiper-slide .class-details::after {
+  position: absolute;
+  left: -8px;
+  top: -20px;
+  height: 180px;
+  width: 380px;
+  border-top: 4px solid #464646;
+  background-color: #0a0a0a;
+  content: "";
+  transform: rotate(-8deg);
+  z-index: -1;
+}
+
+.swiper-slide:hover .swiper-slide .class-details::after {
+  top: -125px;
+  left: -5;
+}
+
+.swiper-slide .class-details a {
+  display: flex;
+  height: 46px;
+  width: 46px;
+  text-align: center;
+  line-height: 46px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(135 117 117 / 34%);
+}
+
+.swiper-slide .class-details a i {
+  font-size: 16px !important;
+}
+
+.swiper-button-prev {
+  display: none;
+}
+
+.swiper-button-next {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  background-color: #f36100;
+  height: 5px;
+  transform: rotate(-10deg);
+  width: 20px;
+  border-radius: 0%;
+}
+
+.swiper-pagination {
+  margin-top: 30px;
+  position: relative;
+}
+
+.information-details {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.col-md-4 .location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.col-md-4 .location i {
+  margin-right: 20px;
+  height: 65px;
+  width: 65px;
+  line-height: 65px;
+  float: left;
+  gap: 30px;
+  font-size: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  background: #f36100;
+  border: none;
+  color: white;
+}
+
+
+.col-md-4 .location p {
+  padding-top: 10px;
+  overflow: hidden;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.col-md-4 .location ul {
+  display: flex;
+  padding-left: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.col-md-4 .location ul li {
+  padding-top: 10px;
+  overflow: hidden;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  list-style: none;
+}
+
+.col-md-4 .location ul li:nth-child(1)::after {
+  margin-left: 10px;
+  content: " | ";
+  color: #545454;
+}
+
+/* footer */
+.about {
+  margin-bottom: 40px;
+}
+
+.about .logo {
+  padding-bottom: 30px;
+}
+
+.social-icons a i {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.col-lg-2 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.widgets {
+  margin-bottom: 30px;
+}
+
+.widgets h4 {
+  color: white;
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.widgets ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.widgets li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  color: #c4c4c4;
+  line-height: 30px;
+}
+
+.footer-tips-title {
+  margin-bottom: 20px;
+}
+
+.footer-tips-title h6 a {
+  color: #c4c4c4;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.copyright-text {
+  margin-top: 15px;
+  padding: 25px 0px;
+  letter-spacing: 0.5px;
+  border-top: 1px solid #1a1a1a;
+}
+
+.copyright-text i {
+  font-size: 14px;
+  color: #f36100;
+}
