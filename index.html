@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Carousel Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script> 
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg fixed-top bg-dark" style="z-index: 10;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" style="height: 40px;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center d-none d-lg-flex" id="navbarNav">
+                <ul class="navbar-nav me-auto ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                </ul>
+
+                <div class="d-none d-lg-flex gap-3">
+                    <a href="#"><i class="fab fa-facebook-f text-white"></i></a>
+                    <a href="#"><i class="fab fa-twitter text-white"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-white"></i></a>
+                    <a href="#"><i class="fab fa-youtube text-white"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <img src="logo.png" alt="Logo" style="height: 40px;">
+            </h5>
+            <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+            <hr class="text-white-50">
+            <div class="social-icons mt-3">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url('hero-1.jpg');">
+                <div class="container h-100 d-flex align-items-center justify-content-center">
+                    <div class="row w-100">
+                        <div class="col-lg-6 offset-lg-3 text-center">
+                            <div class="content">
+                                <span class="spacing">Transform Your Body</span>
+                                <h1 class="underline-hover">Be <strong style="color: rgb(255, 99, 1);">Strong</strong></h1>
+                                <h1 class="wave-text">
+                                    <span>T</span><span>R</span><span>A</span><span>I</span><span>N</span><span>N</span><span>I</span><span>N</span><span>G</span>
+                                    <span>H</span><span>A</span><span>R</span><span>D</span>
+                                </h1>
+                                <button class="btn btn-default">GET INFO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="background-image: url('hero-2.jpg');">
+                <div class="container h-100 d-flex align-items-center justify-content-center">
+                    <div class="row w-100">
+                        <div class="col-lg-6 offset-lg-3 text-center">
+                            <div class="content">
+                                <span class="spacing">Transform Your Body</span>
+                                <h1 class="underline-hover">Be <strong style="color: rgb(255, 99, 1);">Strong</strong></h1>
+                                <h1 class="wave-text">
+                                    <span>T</span><span>R</span><span>A</span><span>I</span><span>N</span><span>N</span><span>I</span><span>N</span><span>G</span>
+                                    <span>H</span><span>A</span><span>R</span><span>D</span>
+                                </h1>
+                                <button class="btn btn-default">GET INFO</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <section class="choses-section box bg-black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center text-white">
+                    <div class="section-title">
+                        <span class="orange">Why Choose Us</span>
+                        <h2 class="title">PUSH YOUR LIMITS FORWARDS
+                            <div class="aurora">
+                                <div class="aurora__item"></div>
+                                <div class="aurora__item"></div>
+                                <div class="aurora__item"></div>
+                                <div class="aurora__item"></div>
+                              </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row inform">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="fs-items">
+                        <span class="gym-icons"><i class="fa-solid fa-bicycle"></i></span>
+                        <h4>Modern Equipment</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            dolore facilisis.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="fs-items">
+                        <span class="gym-icons"><i class="fa-solid fa-bowl-food"></i></span>
+                        <h4>healthy nutrition plane</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            dolore facilisis.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="fs-items">
+                        <span class="gym-icons"><i class="fa-solid fa-dumbbell"></i></span>
+                        <h4>Proffesnol traning plan</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            dolore facilisis.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="fs-items">
+                        <span class="gym-icons"><i class="fa-solid fa-heart-pulse"></i></span>
+                        <h4>unique to your needs</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            dolore facilisis.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="box bg-black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center text-white">
+                    <div class="section-title">
+                        <span class="orange">OUR CLASS</span>
+                        <h4 class="title">WHAT WE CAN OFFER
+                            <div class="aurora">
+                                <div class="aurora__item"></div>
+                                <div class="aurora__item"></div>
+                                <div class="aurora__item"></div>
+                                <div class="aurora__item"></div>
+                              </div>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <DIV class="class-item">
+                        <div class="class-pics">
+                            <img src="photo-1546817372-628669db4655.avif" alt="">
+                        </div>
+                        <div class="class-details">
+                            <span class="orange">STRENTH</span>
+                            <h5 class="underline-hover">WEIGHTLIFTING</h5>
+                            <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+                    </DIV>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <DIV class="class-item">
+                        <div class="class-pics">
+                            <img src="photo-1550259979-ed79b48d2a30.avif" alt="">
+                        </div>
+                        <div class="class-details">
+                            <span class="orange">CARDIO</span>
+                            <h5 class="underline-hover">INDOOR YOGA</h5>
+                            <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+                    </DIV>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <DIV class="class-item">
+                        <div class="class-pics">
+                            <img src="KITTLEBELL POWER.jpg" alt="">
+                        </div>
+                        <div class="class-details">
+                            <span class="orange">STRENTH</span>
+                            <h5 class="underline-hover">KETTLEBELL POWER</h5>
+                            <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </DIV>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-6 col-sm-6">
+                    <DIV class="class-item">
+                        <div class="class-pics">
+                            <img src="boxing.avif" alt="">
+                        </div>
+                        <div class="class-details">
+                            <span class="orange">BOXING</span>
+                            <h5 class="underline-hover">BOOXING TRAINING</h5>
+                            <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+                    </DIV>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <DIV class="class-item">
+                        <div class="class-pics">
+                            <img src="yoga.jpg" alt="">
+                        </div>
+                        <div class="class-details">
+                            <span class="orange">YOGA</span>
+                            <h5 class="underline-hover">MASTER TRAINING</h5>
+                            <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                        </div>
+                    </DIV>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="box banner-box">
+        <div class="banner-box-shadow"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="register-banner">
+                        <h2 class="underline-hover">registration now to get more deals</h2>
+                        <div class="gym-tips">Where health, beauty and fitness meet.</div>
+                        <a href="#" class="primary-btn">Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- plans -->
+    <section class="box bg-black plan-sections">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center text-white">
+                    <div class="section-title">
+                        <span class="orange">OUR PLAN</span>
+                        <h2 class="title">CHOOSE YOUR PRICING PLAN
+                            <div class="aurora">
+                                <div class="aurora__item"></div>
+                                <div class="aurora__item"></div>
+                                <div class="aurora__item"></div>
+                                <div class="aurora__item"></div>
+                              </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 plan-box">
+                    <div class="plan-item bordercolor">
+                        <h4>Class Drop - In</h4>
+                        <div class="plan-price">
+                            <h2>500RS.</h2>
+                            <span>SINGLE CLASS</span>
+                        </div>
+                        <UL class="plan-list">
+                            <LI>Free riding</LI>
+                            <LI>Unlimited equipments</LI>
+                            <LI>Prosnonal Trainer</LI>
+                            <LI>Weight losing class</LI>
+                            <LI>Months to mouth</LI>
+                            <LI>No time restriction</LI>
+                        </UL>
+                        <a href="#" class="btn btn-primary pricing-btn">Enrolll Now</a>
+                        <a href="#" class="image-icon"><i class="fa-regular fa-image"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 plan-box">
+                    <div class="plan-item bordercolor">
+                        <h4>12 Months Unlimited</h4>
+                        <div class="plan-price">
+                            <h2>6000RS.</h2>
+                            <span>SINGLE CLASS</span>
+                        </div>
+                        <UL class="plan-list">
+                            <LI>Free riding</LI>
+                            <LI>Unlimited equipments</LI>
+                            <LI>Prosnonal Trainer</LI>
+                            <LI>Weight losing class</LI>
+                            <LI>Months to mouth</LI>
+                            <LI>No time restriction</LI>
+                        </UL>
+                        <a href="#" class="btn btn-primary pricing-btn">Enrolll Now</a>
+                        <a href="#" class="image-icon"><i class="fa-regular fa-image"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 plan-box">
+                    <div class="plan-item bordercolor">
+                        <h4>6 Months Unlimited</h4>
+                        <div class="plan-price">
+                            <h2>4000RS.</h2>
+                            <span>SINGLE CLASS</span>
+                        </div>
+                        <UL class="plan-list">
+                            <LI>Free riding</LI>
+                            <LI>Unlimited equipments</LI>
+                            <LI>Prosnonal Trainer</LI>
+                            <LI>Weight losing class</LI>
+                            <LI>Months to mouth</LI>
+                            <LI>No time restriction</LI>
+                        </UL>
+                        <a href="#" class="btn btn-primary pricing-btn">Enrolll Now</a>
+                        <a href="#" class="image-icon"><i class="fa-regular fa-image"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="box bg-black">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 first-gym-gallary">
+                    <div class="gym-photo">
+                        <a href="#"><img src="gallery-1.jpg" alt="">
+                            <i class="fa-regular fa-image fa-icon-hover"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 first-gym-gallary">
+                    <div class="gym-photo">
+                        <a href="#"><img src="gallery-2.jpg" alt="">
+                            <i class="fa-regular fa-image fa-icon-hover"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 first-gym-gallary">
+                    <div class="gym-photo">
+                        <a href="#"><img src="gallery-3.jpg" alt="">
+                            <i class="fa-regular fa-image fa-icon-hover"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 second-gym-gallary">
+                    <div class="gym-photo">
+                        <a href="#"><img src="gallery-1.jpg" alt="">
+                            <i class="fa-regular fa-image fa-icon-hover"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 second-gym-gallary">
+                    <div class="gym-photo">
+                        <a href="#"><img src="gallery-2.jpg" alt="">
+                            <i class="fa-regular fa-image fa-icon-hover"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6 second-gym-gallary">
+                    <div class="gym-photo">
+                        <a href="#"><img src="gallery-3.jpg" alt="">
+                            <i class="fa-regular fa-image fa-icon-hover"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our team -->
+    <section class="box bg-black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-left text-white team-header">
+                    <div class="team-title">
+                        <span class="orange">OUR TEAM</span>
+                        <h4 class="title">TRAIN WITH EXPERTS
+                            <div class="aurora">
+                                <div class="aurora__item"></div>
+                                <div class="aurora__item"></div>
+                                <div class="aurora__item"></div>
+                                <div class="aurora__item"></div>
+                              </div>
+                        </h4>
+                    </div>
+                    <a href="#" class="primary-btn">Appointment</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 trainer-slider">
+                    <div class="swiper swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+
+                                <div class="class-pics">
+                                    <img src="photo-1546817372-628669db4655.avif" alt="">
+                                </div>
+                                <div class="class-details">
+                                    <span class="orange">STRENTH</span>
+                                    <h5 class="underline-hover">WEIGHTLIFTING</h5>
+                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="class-pics">
+                                    <img src="yoga.jpg" alt="">
+                                </div>
+                                <div class="class-details">
+                                    <span class="orange">YOGA</span>
+                                    <h5 class="underline-hover">MASTER TRAINING</h5>
+                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+
+                                <div class="class-pics">
+                                    <img src="yoga.jpg" alt="">
+                                </div>
+                                <div class="class-details">
+                                    <span class="orange">YOGA</span>
+                                    <h5 class="underline-hover">MASTER TRAINING</h5>
+                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <div class="class-pics">
+                                    <img src="yoga.jpg" alt="">
+                                </div>
+                                <div class="class-details">
+                                    <span class="orange">YOGA</span>
+                                    <h5 class="underline-hover">MASTER TRAINING</h5>
+                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <div class="class-pics">
+                                    <img src="yoga.jpg" alt="">
+                                </div>
+                                <div class="class-details">
+                                    <span class="orange">YOGA</span>
+                                    <h5 class="underline-hover">MASTER TRAINING</h5>
+                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <div class="class-pics">
+                                    <img src="yoga.jpg" alt="">
+                                </div>
+                                <div class="class-details">
+                                    <span class="orange">YOGA</span>
+                                    <h5 class="underline-hover">MASTER TRAINING</h5>
+                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <div class="class-pics">
+                                    <img src="yoga.jpg" alt="">
+                                </div>
+                                <div class="class-details">
+                                    <span class="orange">YOGA</span>
+                                    <h5 class="underline-hover">MASTER TRAINING</h5>
+                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <div class="class-pics">
+                                    <img src="yoga.jpg" alt="">
+                                </div>
+                                <div class="class-details">
+                                    <span class="orange">YOGA</span>
+                                    <h5 class="underline-hover">MASTER TRAINING</h5>
+                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <div class="class-pics">
+                                    <img src="yoga.jpg" alt="">
+                                </div>
+                                <div class="class-details">
+                                    <span class="orange">YOGA</span>
+                                    <h5 class="underline-hover">MASTER TRAINING</h5>
+                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+
+                                <div class="class-pics">
+                                    <img src="yoga.jpg" alt="">
+                                </div>
+                                <div class="class-details">
+                                    <span class="orange">YOGA</span>
+                                    <h5 class="underline-hover">MASTER TRAINING</h5>
+                                    <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </section>
+
+    <div class="information-details bg-black">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="location">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <ul>
+                            <li>+91 9012892311</li>
+                            <li>+91 9012892311</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="location">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="box bg-black" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="about">
+                        <div class="logo">
+                            <img src="logo.png" alt="Logo" style="height: 40px;">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse tenetur qui eos dolorum a?
+                            Voluptate soluta nihil quis blanditiis labore, nobis excepturi saepe quas ipsa nemo sit
+                            quibusdam facilis est!</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f text-white"></i></a>
+                            <a href="#"><i class="fab fa-twitter text-white"></i></a>
+                            <a href="#"><i class="fab fa-instagram text-white"></i></a>
+                            <a href="#"><i class="fab fa-youtube text-white"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="widgets">
+                        <h5>Useful links</h5>
+                        <ul>
+                            <li><a href="#" class="underline-hover">About</a></li>
+                            <li><a href="#" class="underline-hover">About</a></li>
+                            <li><a href="#" class="underline-hover">About</a></li>
+                            <li><a href="#" class="underline-hover">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="widgets">
+                        <h5>Supports</h5>
+                        <ul>
+                            <li><a href="#" class="underline-hover">About</a></li>
+                            <li><a href="#" class="underline-hover">About</a></li>
+                            <li><a href="#" class="underline-hover">About</a></li>
+                            <li><a href="#" class="underline-hover">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="widgets">
+                        <h5>Tips & Guides</h5>
+                        <div class="footer-tips-title">
+                            <h6><a href="#">Physical fitness may help prevent depression, anxiety</a></h6>
+                        </div>
+                        <div class="footer-tips-title">
+                            <h6><a href="#">Fitness: The best exercise to lose belly fat and tone up...</a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 col-sm-6 text-center">
+                    <div class="copyright-text">
+                        <p>Copyright ©2025 All rights reserved | This template is made with <i class="fa-solid fa-heart"></i> by <span style="color: #f36100;">Manish</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
